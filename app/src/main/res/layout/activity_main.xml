@@ -1,0 +1,48 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:adjustViewBounds="false"
+            android:contentDescription="@string/ThemeName"
+            android:cropToPadding="false"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/heroimage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/activity_padding"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Heading"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="32dp"
+                android:textAppearance="@style/Heading" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/About"
+                android:textAppearance="@style/Text" />
+
+            <Button
+                android:id="@+id/substratum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Substratum" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

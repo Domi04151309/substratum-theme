@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Heading">About the Theme</string>
+    <string name="About">Domi\'s Substratum Theme is an open source project. The theme includes some nice and colorful overlays for some popular apps as well as better dark modes and other neat things.\n</string>
+    <string name="Substratum">Open Substratum</string>
+</resources>

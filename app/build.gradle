@@ -26,7 +26,7 @@ android {
     defaultConfig {
         // If you're planning to change up the package name, ensure you have read the readme
         // thoroughly!
-        applicationId "substratum.theme.template"
+        applicationId "io.github.domi04151309.substratum"
         // We are only supporting Nougat and above, all new changes will incorporate Nougat changes
         // to the substratum repo rather than anything lower. Keep targetSdkVersion the same.
         minSdkVersion 24
@@ -74,6 +74,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version") {
         transitive = true
     }
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
 }
 
 // Themers: DO NOT MODIFY ANYTHING BELOW
@@ -170,3 +171,5 @@ boolean shouldEncrypt() {
     ArrayList<String> tasks = project.gradle.startParameter.taskNames
     return SHOULD_ENCRYPT_ASSETS && Arrays.toString(tasks).toLowerCase().contains("release")
 }
+
+apply plugin: 'kotlin-android-extensions'

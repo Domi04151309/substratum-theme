@@ -1,0 +1,48 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="actionBarStyle">@style/ActionBar</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonStyle">@style/Button</item>
+    </style>
+
+    <style name="ActionBar" parent="@style/Widget.AppCompat.ActionBar.Solid">
+        <item name="background">@drawable/actionbar_bg</item>
+        <item name="titleTextStyle">@style/ActionBarTitle</item>
+        <item name="height">@dimen/bar_height</item>
+    </style>
+
+    <style name="ActionBarTitle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:fontWeight" tools:targetApi="o">500</item>
+        <item name="android:textSize" tools:ignore="SpUsage">14dp</item>
+        <item name="android:letterSpacing">0.1875</item>
+        <item name="android:lineHeight" tools:targetApi="28">18dp</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <style name="Heading" parent="android:TextAppearance.Material.Body1">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontWeight" tools:targetApi="o">400</item>
+        <item name="android:letterSpacing">0.0625</item>
+        <item name="android:lineHeight" tools:targetApi="28">25sp</item>
+    </style>
+
+    <style name="Text" parent="android:TextAppearance.Material.Body1">
+        <item name="android:textColor">@color/colorText</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.03125</item>
+        <item name="android:lineHeight" tools:targetApi="28">22sp</item>
+    </style>
+
+    <style name="Button" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_bg</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:lineHeight" tools:targetApi="28">32dp</item>
+        <item name="android:textColor">@color/colorTextLight</item>
+        <item name="android:fontWeight" tools:targetApi="o">400</item>
+        <item name="android:textSize">13.333dp</item>
+    </style>
+</resources>
