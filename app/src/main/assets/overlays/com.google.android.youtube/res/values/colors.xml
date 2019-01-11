@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="material_grey_100">#ff000000</color>
+    <color name="material_grey_50">#ff000000</color>
+    <color name="material_grey_600">#ff000000</color>
+    <color name="material_grey_800">#ff000000</color>
+    <color name="material_grey_850">#ff000000</color>
+    <color name="material_grey_900">#ff000000</color>
+    <color name="yt_black1">#ff000000</color>
+    <color name="yt_black1_opacity95">#f2000000</color>
+    <color name="yt_black1_opacity98">#fa000000</color>
+    <color name="yt_black2">#ff000000</color>
+    <color name="yt_black3">#ff000000</color>
+    <color name="yt_black4">#ff000000</color>
+    <color name="yt_status_bar_background_dark">#ff000000</color>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.AppCompat.Notification.Info" parent="@android:style/TextAppearance.StatusBar.EventContent">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">#b3ffffff</item>
+    </style>
+    <style name="TextAppearance.AppCompat.Notification.Time" parent="@android:style/TextAppearance.StatusBar.EventContent">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">#b3ffffff</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Info" parent="@android:style/TextAppearance.StatusBar.EventContent">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">#b3ffffff</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Time" parent="@android:style/TextAppearance.StatusBar.EventContent">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">#b3ffffff</item>
+    </style>
+</resources>

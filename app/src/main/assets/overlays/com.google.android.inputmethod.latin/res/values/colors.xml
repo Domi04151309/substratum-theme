@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="popup_background_material_dark_theme">#000</color>
+  <color name="popup_overlay_background">#88000000</color>
+  <color name="tooltip_background_dark">#e6000000</color>
+  <color name="key_pressed_bordered_dark_theme">#000</color>
+  <color name="key_bordered_dark_theme">#000</color>
+</resources>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_floating_material_dark">#000</color>
+    <color name="background_material_dark">#000</color>
+    <color name="cardview_dark_background">#000</color>
+    <color name="design_dark_default_color_background">#000</color>
+    <color name="favorites_prompt_background_color_dark_mode">#000</color>
+    <color name="favorites_prompt_border_color_dark_mode">#000</color>
+    <color name="google_grey900">#000</color>
+    <color name="tooltip_background_dark">#e6000000</color>
+    <color name="design_snackbar_background_color">#000</color>
+</resources>

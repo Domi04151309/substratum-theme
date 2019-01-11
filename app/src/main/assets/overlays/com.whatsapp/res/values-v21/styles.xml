@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TextAppearance.AppCompat.Notification.Info.Media" parent="@android:style/TextAppearance.Material.Notification.Info">
+        <item name="android:textColor">#b3ffffff</item>
+    </style>
+    <style name="TextAppearance.AppCompat.Notification.Media" parent="@android:style/TextAppearance.Material.Notification">
+        <item name="android:textColor">#b3ffffff</item>
+    </style>
+    <style name="TextAppearance.AppCompat.Notification.Time.Media" parent="@android:style/TextAppearance.Material.Notification.Time">
+        <item name="android:textColor">#b3ffffff</item>
+    </style>
+    <style name="TextAppearance.AppCompat.Notification.Title.Media" parent="@android:style/TextAppearance.Material.Notification.Title">
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Info.Media" parent="@android:style/TextAppearance.Material.Notification.Info">
+        <item name="android:textColor">#b3ffffff</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Media" parent="@android:style/TextAppearance.Material.Notification">
+        <item name="android:textColor">#b3ffffff</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Time.Media" parent="@android:style/TextAppearance.Material.Notification.Time">
+        <item name="android:textColor">#b3ffffff</item>
+    </style>
+    <style name="TextAppearance.Compat.Notification.Title.Media" parent="@android:style/TextAppearance.Material.Notification.Title">
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+</resources>
