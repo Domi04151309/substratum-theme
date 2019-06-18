@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="notification_material_background_dimmed_color">#80ffffff</color>
+    <color name="notification_gear_color">#fff</color>
+    <color name="keyguard_affordance">#00ffffff</color>
+</resources>

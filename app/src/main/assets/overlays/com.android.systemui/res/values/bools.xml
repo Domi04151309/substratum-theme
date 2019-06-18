@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="config_drawNotificationBackground">false</bool>
+    <bool name="config_showDividersWhenGroupNotificationExpanded">true</bool>
+    <bool name="config_showGroupNotificationBgWhenExpanded">true</bool>
+    <bool name="config_showNotificationExpandButtonAtEnd">true</bool>
+    <bool name="config_statusBarShowNumber">true</bool>
+    <bool name="config_status_bar_scrim_behind_use_src">false</bool>
+</resources>
