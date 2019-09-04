@@ -30,6 +30,17 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <receiver
+            android:name=".GlanceLite"
+            android:label="@string/glance_lite_title">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/glance_lite_info" />
+        </receiver>
         <activity android:name=".SubstratumLauncher">
             <intent-filter>
                 <action android:name="projekt.substratum.THEME" />
