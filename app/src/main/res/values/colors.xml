@@ -5,4 +5,6 @@
     <color name="colorPrimaryDark">#000</color>
     <color name="colorText">#374146</color>
     <color name="colorTextLight">#fff</color>
+
+    <color name="colorTextDashboard">#666</color>
 </resources>

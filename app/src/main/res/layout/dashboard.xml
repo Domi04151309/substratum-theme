@@ -1,0 +1,76 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashboard_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:id="@+id/topLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/dataUsed"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dashboard_unavailable"
+                android:textSize="@dimen/dashboard_big_text"
+                style="@style/DashboardText" />
+
+            <TextView
+                android:id="@+id/availableStorage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dashboard_unavailable"
+                android:textSize="@dimen/dashboard_big_text"
+                style="@style/DashboardText" />
+
+            <TextView
+                android:id="@+id/battery"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dashboard_unavailable"
+                android:textSize="@dimen/dashboard_big_text"
+                style="@style/DashboardText" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/topLayout">
+
+            <TextView
+                android:id="@+id/dataUsedTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dashboard_data_used"
+                style="@style/DashboardText" />
+
+            <TextView
+                android:id="@+id/availableStorageTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dashboard_available_storage"
+                style="@style/DashboardText" />
+
+            <TextView
+                android:id="@+id/batteryTxt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/dashboard_battery"
+                style="@style/DashboardText" />
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

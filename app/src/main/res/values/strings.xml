@@ -6,4 +6,12 @@
 
     <string name="glance_lite_title">At a glance lite</string>
     <string name="glance_lite_text">Loading</string>
+    <string name="dashboard_title">Dashboard</string>
+    <string name="dashboard_data_used">Data used</string>
+    <string name="dashboard_available_storage">Available storage</string>
+    <string name="dashboard_battery">Battery</string>
+    <string name="dashboard_unavailable">-</string>
+
+    <string name="request_phone_state">Request Phone State Permission</string>
+    <string name="request_usage_stats">Request Usage Stats Permission</string>
 </resources>

@@ -4,14 +4,21 @@
     package="io.github.domi04151309.substratum"
     android:installLocation="internalOnly">
 
-    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-
+    <permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        android:protectionLevel="signature" />
     <uses-feature
         android:name="io.github.domi04151309.substratum"
         android:required="false" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission
+        android:name="android.permission.PACKAGE_USAGE_STATS"
+        tools:ignore="ProtectedPermissions" />
 
-    <!-- Set to true for OMS-rom only block to be enabled -->
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="false"
         android:extractNativeLibs="false"
@@ -22,6 +29,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         tools:node="replace">
+        <activity android:name=".PermissionActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,17 +38,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <receiver
-            android:name=".GlanceLite"
-            android:label="@string/glance_lite_title">
-            <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
-            </intent-filter>
-
-            <meta-data
-                android:name="android.appwidget.provider"
-                android:resource="@xml/glance_lite_info" />
-        </receiver>
         <activity android:name=".SubstratumLauncher">
             <intent-filter>
                 <action android:name="projekt.substratum.THEME" />
@@ -83,14 +80,34 @@
         <meta-data
             android:name="Substratum_HeroOverride"
             android:value="@string/ThemeHeroOverride" />
-
-        <!-- SUBSTRATUM INTERNAL USE: DO NOT TOUCH -->
         <meta-data
             android:name="Substratum_Plugin"
             android:value="14.0.2" />
         <meta-data
             android:name="Substratum_Encryption"
-            android:value="@string/encryption_status" />
+            android:value="@string/encryption_status" /> <!-- SUBSTRATUM INTERNAL USE: DO NOT TOUCH -->
+        <receiver
+            android:name=".Dashboard"
+            android:label="@string/dashboard_title">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/dashboard_info" />
+        </receiver>
+        <receiver
+            android:name=".GlanceLite"
+            android:label="@string/glance_lite_title">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/glance_lite_info" />
+        </receiver>
     </application>
 
 </manifest>

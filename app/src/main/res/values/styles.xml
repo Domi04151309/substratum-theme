@@ -43,13 +43,23 @@
         <item name="android:lineHeight" tools:targetApi="28">32dp</item>
         <item name="android:textColor">@color/colorTextLight</item>
         <item name="android:fontWeight" tools:targetApi="o">400</item>
-        <item name="android:textSize">13.333dp</item>
+        <item name="android:textSize" tools:ignore="SpUsage">13.333dp</item>
     </style>
 
-    <style name="WidgetText" parent="TextAppearance.AppCompat">
+    <style name="GlanceLiteText" parent="TextAppearance.AppCompat">
         <item name="android:fontFamily">@font/product_sans</item>
         <item name="android:background">@android:color/transparent</item>
         <item name="android:textColor">@android:color/white</item>
         <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="DashboardText" parent="TextAppearance.AppCompat">
+        <item name="android:layout_margin">@dimen/widget_item_margin</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/colorTextDashboard</item>
+        <item name="android:shadowColor">@color/colorTextDashboard</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+        <item name="android:shadowRadius">1</item>
     </style>
 </resources>
