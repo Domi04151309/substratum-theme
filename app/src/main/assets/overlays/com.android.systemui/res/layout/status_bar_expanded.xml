@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.systemui.statusbar.phone.NotificationPanelView
+  android:id="@*com.android.systemui:id/notification_panel"
+  android:background="#30000000"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include
+      android:visibility="gone"
+      layout="@*com.android.systemui:layout/keyguard_status_view" />
+    <com.android.systemui.statusbar.phone.NotificationsQuickSettingsContainer
+      android:layout_gravity="@*com.android.systemui:integer/notification_panel_layout_gravity"
+      android:id="@*com.android.systemui:id/notification_container_parent"
+      android:clipChildren="false"
+      android:clipToPadding="false"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+        <FrameLayout
+          android:layout_gravity="@*com.android.systemui:integer/notification_panel_layout_gravity"
+          android:id="@*com.android.systemui:id/qs_frame"
+          android:clipChildren="false"
+          android:clipToPadding="false"
+          android:layout="@*com.android.systemui:layout/qs_panel"
+          android:layout_width="@*com.android.systemui:dimen/qs_panel_width"
+          android:layout_height="fill_parent" />
+        <com.android.systemui.statusbar.stack.NotificationStackScrollLayout
+          android:layout_gravity="@*com.android.systemui:integer/notification_panel_layout_gravity"
+          android:id="@*com.android.systemui:id/notification_stack_scroller"
+          android:layout_width="@*com.android.systemui:dimen/notification_panel_width"
+          android:layout_height="fill_parent"
+          android:layout_marginTop="@*com.android.systemui:dimen/notification_panel_margin_top"
+          android:layout_marginBottom="@*com.android.systemui:dimen/close_handle_underlap" />
+        <include
+          android:id="@*com.android.systemui:id/ambient_indication_container"
+          layout="@*com.android.systemui:layout/ambient_indication" />
+        <ViewStub
+          android:id="@*com.android.systemui:id/keyguard_user_switcher"
+          android:layout="@*com.android.systemui:layout/keyguard_user_switcher"
+          android:layout_width="fill_parent"
+          android:layout_height="fill_parent" />
+        <include
+          android:visibility="invisible"
+          layout="@*com.android.systemui:layout/keyguard_status_bar" />
+        <ImageButton
+          android:layout_gravity="bottom|center"
+          android:id="@*com.android.systemui:id/clear_notifications"
+          android:background="@*com.android.systemui:drawable/floating_action_button"
+          android:visibility="gone"
+          android:layout_width="@*com.android.systemui:dimen/dismiss_all_button_width"
+          android:layout_height="@*com.android.systemui:dimen/dismiss_all_button_height"
+          android:layout_marginBottom="@*com.android.systemui:dimen/dismiss_all_button_margin_bottom"
+          android:src="@*com.android.systemui:drawable/recents_dismiss_all_icon"
+          android:scaleType="centerInside"
+          android:elevation="79.0px" />
+        <Button
+          android:id="@*com.android.systemui:id/report_rejected_touch"
+          android:visibility="gone"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@*com.android.systemui:dimen/status_bar_header_height_keyguard"
+          android:text="@*com.android.systemui:string/report_rejected_touch" />
+    </com.android.systemui.statusbar.phone.NotificationsQuickSettingsContainer>
+    <include
+      android:visibility="gone"
+      layout="@*com.android.systemui:layout/keyguard_bottom_area" />
+    <com.android.systemui.statusbar.AlphaOptimizedView
+      android:layout_gravity="bottom"
+      android:id="@*com.android.systemui:id/qs_navbar_scrim"
+      android:background="@*com.android.systemui:drawable/qs_navbar_scrim"
+      android:visibility="invisible"
+      android:layout_width="fill_parent"
+      android:layout_height="96.0dip" />
+</com.android.systemui.statusbar.phone.NotificationPanelView>
