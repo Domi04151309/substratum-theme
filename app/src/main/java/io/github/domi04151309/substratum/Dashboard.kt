@@ -40,7 +40,7 @@ class Dashboard : AppWidgetProvider() {
 
     private fun getDataUsed(c: Context): String {
         var size = getAllBytesMobile(c)
-        var suffix = ""
+        var suffix = "B"
         if (size >= 1024) {
             suffix = "KB"
             size /= 1024
@@ -50,10 +50,10 @@ class Dashboard : AppWidgetProvider() {
             }
         }
         val resultBuffer = StringBuilder(size.toString())
-        var commaOffset = resultBuffer.length - 2
+        var commaOffset = resultBuffer.length - 3
         while (commaOffset > 0) {
             resultBuffer.insert(commaOffset, ',')
-            commaOffset -= 2
+            commaOffset -= 3
         }
         resultBuffer.append(suffix)
         return resultBuffer.toString()
