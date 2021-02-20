@@ -23,7 +23,6 @@ import android.support.v4.content.PermissionChecker.checkPermission
 import io.github.domi04151309.custom.PermissionActivity
 import io.github.domi04151309.custom.R
 
-
 class Dashboard : AppWidgetProvider() {
 
     override fun onUpdate(context: Context, appWidgetManager: AppWidgetManager, appWidgetIds: IntArray) {
@@ -62,39 +61,32 @@ class Dashboard : AppWidgetProvider() {
     }
 
     private fun getAvailableStorage(): String {
-        val path = Environment.getDataDirectory()
-        val stat = StatFs(path.path)
-        val availableBlocks = stat.availableBlocksLong.toFloat()
-        val totalBlocks = stat.blockCountLong.toFloat()
-        val percentage = (availableBlocks / totalBlocks * 100).toInt()
-        return "$percentage%"
+        val stat = StatFs(Environment.getDataDirectory().path)
+        return "${(stat.availableBlocksLong.toFloat() / stat.blockCountLong.toFloat() * 100).toInt()}%"
     }
 
     private fun getBatteryPercentage(c: Context): String {
-        val batteryStatus: Intent? = c.registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
-        val level: Int = batteryStatus?.getIntExtra(BatteryManager.EXTRA_LEVEL, 0) ?: 0
-        return "$level%"
+        return "${
+            c.registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))?.getIntExtra(BatteryManager.EXTRA_LEVEL, 0) ?: 0
+        }%"
     }
 
     @SuppressLint("MissingPermission", "HardwareIds")
     private fun getAllBytesMobile(c: Context): Long {
-        if (hasPermissions(c)) {
-            val networkStatsManager = c.applicationContext.getSystemService(Context.NETWORK_STATS_SERVICE) as NetworkStatsManager
-            val telephonyManager = c.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
+        return if (hasPermissions(c)) {
             val bucket: NetworkStats.Bucket
             try {
-                bucket = networkStatsManager.querySummaryForDevice(ConnectivityManager.TYPE_MOBILE,
-                        telephonyManager.subscriberId,
-                        getFirstDayOfMonth(),
-                        System.currentTimeMillis())
+                bucket = (c.applicationContext.getSystemService(Context.NETWORK_STATS_SERVICE) as NetworkStatsManager)
+                        .querySummaryForDevice(ConnectivityManager.TYPE_MOBILE,
+                                (c.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager).subscriberId,
+                                getFirstDayOfMonth(),
+                                System.currentTimeMillis()
+                        )
+                bucket.txBytes + bucket.rxBytes
             } catch (e: RemoteException) {
-                return 0
+                0
             }
-
-            return bucket.txBytes + bucket.rxBytes
-        } else {
-            return 0
-        }
+        } else 0
     }
 
     private fun hasPermissions(c: Context): Boolean {
@@ -106,16 +98,17 @@ class Dashboard : AppWidgetProvider() {
         return if (checkPermission(c, READ_PHONE_STATE, android.os.Process.myPid(), c.applicationInfo.uid, c.packageName) == PackageManager.PERMISSION_DENIED) {
             c.startActivity(Intent(c, PermissionActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
             false
-        } else {
-            true
-        }
+        } else true
     }
 
     private fun hasPermissionToReadNetworkHistory(c: Context): Boolean {
-        val appOps = c.getSystemService(Context.APP_OPS_SERVICE) as AppOpsManager?
-        val mode = appOps!!.checkOpNoThrow(AppOpsManager.OPSTR_GET_USAGE_STATS,
-                android.os.Process.myUid(), c.packageName)
-        return if (mode == AppOpsManager.MODE_ALLOWED) {
+        return if (
+                (c.getSystemService(Context.APP_OPS_SERVICE) as AppOpsManager)
+                        .checkOpNoThrow(
+                                AppOpsManager.OPSTR_GET_USAGE_STATS,
+                                android.os.Process.myUid(), c.packageName
+                        ) == AppOpsManager.MODE_ALLOWED
+        ) {
             true
         } else {
             c.startActivity(Intent(c, PermissionActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK))
