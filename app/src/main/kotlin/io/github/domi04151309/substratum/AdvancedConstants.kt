@@ -4,12 +4,12 @@ object AdvancedConstants {
 
     // Custom message on theme launch, see theme_strings.xml for changing the dialog content
     // Set SHOW_DIALOG_REPEATEDLY to true if you want the dialog to be showed on every theme launch
-    const val SHOW_LAUNCH_DIALOG = false
-    const val SHOW_DIALOG_REPEATEDLY = false
+    const val SHOW_LAUNCH_DIALOG: Boolean = false
+    const val SHOW_DIALOG_REPEATEDLY: Boolean = false
 
     // Blacklisted APKs to prevent theme launching, these include simple regex formatting, without
     // full regex formatting (e.g. com.android. will block everything that starts with com.android.)
-    val BLACKLISTED_APPLICATIONS = arrayOf(
+    val BLACKLISTED_APPLICATIONS: Array<String> = arrayOf(
             "cc.madkite.freedom",
             "zone.jasi2169.uretpatcher",
             "uret.jasi2169.patcher",
@@ -39,7 +39,7 @@ object AdvancedConstants {
     )
 
     // List of all organization theming systems officially supported by the team
-    val ORGANIZATION_THEME_SYSTEMS = arrayOf(
+    val ORGANIZATION_THEME_SYSTEMS: Array<String> = arrayOf(
             "projekt.substratum",
             "projekt.substratum.debug",
             "projekt.substratum.lite",
@@ -48,7 +48,7 @@ object AdvancedConstants {
 
     // List of other theme systems that are officially unsupported by the team, but fully supported
     // by their corresponding organizations
-    val OTHER_THEME_SYSTEMS = arrayOf(
+    val OTHER_THEME_SYSTEMS: Array<String> = arrayOf(
             "com.slimroms.thememanager",
             "com.slimroms.omsbackend"
     )

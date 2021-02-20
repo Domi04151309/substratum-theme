@@ -52,7 +52,7 @@ class SubstratumLauncher : Activity() {
         super.onCreate(savedInstanceState)
 
         /* STEP 1: Block hijackers */
-        val caller = callingActivity!!.packageName
+        val caller = (callingActivity ?: throw IllegalArgumentException()).packageName
         val organizationsSystem = ORGANIZATION_THEME_SYSTEMS.contains(caller)
         val supportedSystem = organizationsSystem || OTHER_THEME_SYSTEMS.contains(caller)
         if (!BuildConfig.SUPPORTS_THIRD_PARTY_SYSTEMS && !supportedSystem) {

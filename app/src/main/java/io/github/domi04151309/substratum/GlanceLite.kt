@@ -9,6 +9,7 @@ import android.content.Intent
 import android.icu.text.SimpleDateFormat
 import android.icu.util.Calendar
 import android.widget.RemoteViews
+import java.util.*
 
 class GlanceLite : AppWidgetProvider() {
 
@@ -31,7 +32,7 @@ class GlanceLite : AppWidgetProvider() {
         views.setOnClickPendingIntent(R.id.appwidget_text, getPendingSelfIntent(context))
         views.setTextViewText(
                 R.id.appwidget_text,
-                SimpleDateFormat("EEEE, MMM d").format(Calendar.getInstance())
+                SimpleDateFormat("EEEE, MMM d", Locale.getDefault()).format(Calendar.getInstance())
         )
 
         appWidgetManager.updateAppWidget(ComponentName(context, GlanceLite::class.java), views)
