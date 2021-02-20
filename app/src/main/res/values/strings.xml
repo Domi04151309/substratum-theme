@@ -4,8 +4,10 @@
     <string name="About">Domi\'s Substratum Theme is an open source project. The theme includes some nice and colorful overlays for some popular apps as well as better dark modes and other neat things.\n</string>
     <string name="Substratum">Open Substratum</string>
 
+    <string name="loading">Loading</string>
+
     <string name="glance_lite_title">At a glance lite</string>
-    <string name="glance_lite_text">Loading</string>
+    <string name="home_screen_title">Home screen</string>
     <string name="dashboard_title">Dashboard</string>
     <string name="dashboard_data_used">Data used</string>
     <string name="dashboard_available_storage">Available storage</string>

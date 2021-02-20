@@ -1,4 +1,4 @@
-package io.github.domi04151309.substratum
+package io.github.domi04151309.custom.widgets
 
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
@@ -20,6 +20,8 @@ import android.annotation.SuppressLint
 import android.content.pm.PackageManager
 import android.icu.util.Calendar
 import android.support.v4.content.PermissionChecker.checkPermission
+import io.github.domi04151309.custom.PermissionActivity
+import io.github.domi04151309.custom.R
 
 
 class Dashboard : AppWidgetProvider() {

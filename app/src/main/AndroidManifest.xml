@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="io.github.domi04151309.substratum"
+    package="io.github.domi04151309.custom"
     android:installLocation="internalOnly">
 
     <permission
         android:name="android.permission.PACKAGE_USAGE_STATS"
         android:protectionLevel="signature" />
     <uses-feature
-        android:name="io.github.domi04151309.substratum"
+        android:name="io.github.domi04151309.custom"
         android:required="false" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission
@@ -29,8 +29,8 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         tools:node="replace">
-        <activity android:name=".PermissionActivity"></activity>
-        <activity android:name=".MainActivity">
+        <activity android:name="io.github.domi04151309.custom.PermissionActivity" />
+        <activity android:name="io.github.domi04151309.custom.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -38,7 +38,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".SubstratumLauncher">
+        <activity android:name="io.github.domi04151309.substratum.SubstratumLauncher">
             <intent-filter>
                 <action android:name="projekt.substratum.THEME" />
 
@@ -87,7 +87,7 @@
             android:name="Substratum_Encryption"
             android:value="@string/encryption_status" /> <!-- SUBSTRATUM INTERNAL USE: DO NOT TOUCH -->
         <receiver
-            android:name=".Dashboard"
+            android:name="io.github.domi04151309.custom.widgets.Dashboard"
             android:label="@string/dashboard_title">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -98,7 +98,7 @@
                 android:resource="@xml/dashboard_info" />
         </receiver>
         <receiver
-            android:name=".GlanceLite"
+            android:name="io.github.domi04151309.custom.widgets.GlanceLite"
             android:label="@string/glance_lite_title">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -107,6 +107,17 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/glance_lite_info" />
+        </receiver>
+        <receiver
+            android:name="io.github.domi04151309.custom.widgets.HomeScreen"
+            android:label="@string/home_screen_title">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/home_screen_info" />
         </receiver>
     </application>
 

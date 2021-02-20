@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.content.pm.Signature
 import android.os.RemoteException
+import io.github.domi04151309.custom.BuildConfig
 import io.github.domi04151309.substratum.AdvancedConstants.BLACKLISTED_APPLICATIONS
 import io.github.domi04151309.substratum.AdvancedConstants.ORGANIZATION_THEME_SYSTEMS
 import io.github.domi04151309.substratum.AdvancedConstants.OTHER_THEME_SYSTEMS

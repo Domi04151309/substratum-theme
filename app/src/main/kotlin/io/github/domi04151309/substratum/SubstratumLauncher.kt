@@ -13,6 +13,8 @@ import android.widget.Toast
 import com.github.javiersantos.piracychecker.*
 import com.github.javiersantos.piracychecker.enums.*
 import com.github.javiersantos.piracychecker.utils.apkSignature
+import io.github.domi04151309.custom.BuildConfig
+import io.github.domi04151309.custom.R
 import io.github.domi04151309.substratum.AdvancedConstants.ORGANIZATION_THEME_SYSTEMS
 import io.github.domi04151309.substratum.AdvancedConstants.OTHER_THEME_SYSTEMS
 import io.github.domi04151309.substratum.AdvancedConstants.SHOW_DIALOG_REPEATEDLY

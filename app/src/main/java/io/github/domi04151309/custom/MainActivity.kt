@@ -1,4 +1,4 @@
-package io.github.domi04151309.substratum
+package io.github.domi04151309.custom
 
 import android.content.ComponentName
 import android.content.Intent
